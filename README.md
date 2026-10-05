@@ -1,320 +1,322 @@
 # Customer-Feedback-Sentiment-Analysis
-An end-to-end customer feedback analytics project that uses Python, NLP, and Power BI to analyze customer sentiment, identify recurring complaints, compare product performance, track sentiment trends, and generate actionable insights to improve customer experience.
+Customer Feedback Data Cleaning using Python | Pandas — A Python data cleaning project focused on preprocessing customer feedback data, handling missing and inconsistent values, standardizing data formats, validating records, and preparing a clean dataset for further sentiment analysis.
 
-# 📊 Customer Feedback Sentiment Analysis
+# 🧹 Customer Feedback Data Cleaning Using Python
 
 ## 📌 Project Overview
 
-Organizations receive large volumes of customer feedback through surveys, reviews, emails, and social media. Since much of this feedback is unstructured and text-based, manually analyzing every response is time-consuming and difficult at scale.
+Customer feedback data is often collected from different sources such as surveys, reviews, emails, and feedback forms. Before performing any analysis, the raw data needs to be cleaned and standardized to ensure accuracy and consistency.
 
-This project focuses on transforming raw customer feedback into meaningful business insights using **Python, Pandas, NLP/Text Analytics, and Power BI**.
+This project focuses specifically on **data cleaning and preprocessing of customer feedback data using Python and Pandas**.
 
-The analysis classifies customer feedback into **Positive, Negative, and Neutral** sentiments and helps identify recurring complaints, frequently mentioned keywords, customer preferences, product-level sentiment, feedback trends, and areas requiring improvement.
+The objective is to identify and resolve common data quality issues such as missing values, duplicate records, inconsistent formats, invalid dates, inconsistent categorical values, and incorrect data types.
 
-The ultimate goal is to convert the **Voice of the Customer** into actionable insights that support better products, services, and customer experiences.
-
----
-
-## 🎯 Business Problem
-
-Management needs a consolidated view of customer opinions but faces several challenges:
-
-* Large volumes of unstructured customer feedback
-* Manual analysis is time-consuming
-* Difficulty identifying recurring complaints
-* Limited visibility into customer sentiment
-* Challenges in comparing sentiment across products
-* Difficulty tracking sentiment changes over time
-* Important customer concerns may remain unnoticed
-* Lack of a centralized dashboard for decision-making
-
-This project addresses these challenges by applying text analytics and sentiment analysis techniques to customer feedback data.
+The final output is a **clean and analysis-ready dataset** that can be used for future customer sentiment analysis and other data analytics tasks.
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 Business Context
 
-The key objectives of this project are:
+Organizations collect large amounts of customer feedback, but raw feedback data may contain several quality issues.
 
-1. Analyze overall customer sentiment.
-2. Measure positive, negative, and neutral feedback percentages.
-3. Identify frequently mentioned complaints.
-4. Understand customer opinions about different products.
-5. Evaluate customer service and support experiences.
-6. Monitor sentiment trends over time.
-7. Identify highly satisfied customers.
-8. Detect customers with repeated negative feedback.
-9. Measure feedback volume across different channels.
-10. Identify frequently mentioned positive and negative aspects.
-11. Prioritize business improvement areas.
-12. Monitor overall brand perception.
-13. Provide actionable insights to improve customer experience.
+For example:
+
+* Missing customer information
+* Missing dates
+* Duplicate records
+* Inconsistent category values
+* Different formats for the same value
+* Invalid or incorrectly formatted dates
+* Inconsistent Yes/No values
+* Incorrect data types
+* Invalid ratings
+
+If these issues are not handled properly, they can affect the accuracy of future analysis.
+
+Therefore, this project focuses on preparing a reliable and structured dataset before performing any further analysis.
 
 ---
 
-## ❓ Business Questions
+## 🎯 Project Objective
 
-The analysis answers the following key business questions:
+The main objective of this project is to:
 
-### 1. Which products receive the highest positive feedback?
+> **Clean, validate, standardize, and prepare customer feedback data using Python and Pandas for further analysis.**
 
-Compare positive reviews across products to identify products that customers appreciate the most.
+### Specific Objectives
 
-### 2. Which products receive the most negative feedback?
-
-Identify products with a high volume of negative feedback to help management investigate quality or performance issues.
-
-### 3. What are the most common customer complaints?
-
-Analyze feedback text to identify recurring complaints such as:
-
-* Delivery delays
-* Product quality
-* Pricing
-* Customer service
-* Product performance
-
-### 4. How does customer sentiment change over time?
-
-Analyze monthly, quarterly, or yearly sentiment trends to understand whether customer satisfaction is improving or declining.
-
-### 5. Which keywords appear most frequently in customer feedback?
-
-Perform keyword frequency analysis to identify common topics, concerns, and customer expectations.
-
-### 6. Which customer segments are the most satisfied?
-
-Compare sentiment across customer segments such as:
-
-* Age group
-* Location
-* Membership type
-* Customer category
-
-### 7. Which feedback channel receives the most responses?
-
-Compare feedback volume across channels such as:
-
-* Surveys
-* Emails
-* Reviews
-* Social Media
-
-### 8. Which business areas should be prioritized for improvement?
-
-Rank customer complaints based on frequency and sentiment to identify the most important improvement areas.
-
-### 9. How can the organization improve the overall customer experience?
-
-Use sentiment trends, recurring complaints, product-level analysis, and customer feedback patterns to recommend improvements.
+1. Inspect the raw dataset.
+2. Understand the structure and data types.
+3. Identify missing values.
+4. Detect duplicate records.
+5. Handle invalid or inconsistent dates.
+6. Standardize categorical values.
+7. Validate rating values.
+8. Correct inconsistent Yes/No values.
+9. Check data types.
+10. Identify invalid records.
+11. Verify the cleaned dataset.
+12. Export the final clean dataset.
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-| Tool / Technology        | Purpose                                      |
-| ------------------------ | -------------------------------------------- |
-| **Python**               | Data cleaning and analysis                   |
-| **Pandas**               | Data manipulation and analysis               |
-| **NumPy**                | Numerical operations                         |
-| **NLP / Text Analytics** | Customer feedback analysis                   |
-| **Matplotlib / Seaborn** | Exploratory data visualization               |
-| **Power BI**             | Interactive dashboard and business reporting |
-| **Excel**                | Initial data inspection and validation       |
-| **GitHub**               | Project documentation and version control    |
+| Tool                 | Purpose                                |
+| -------------------- | -------------------------------------- |
+| **Python**           | Data cleaning and preprocessing        |
+| **Pandas**           | Data manipulation and cleaning         |
+| **NumPy**            | Numerical and missing-value operations |
+| **Jupyter Notebook** | Writing and executing Python code      |
 
 ---
 
-## 🔄 Project Workflow
+## 🔄 Data Cleaning Workflow
 
 ```text
-Raw Customer Feedback
-        ↓
-Data Cleaning
-        ↓
-Data Validation
-        ↓
-Exploratory Data Analysis
-        ↓
-Text Preprocessing
-        ↓
-Sentiment Analysis
-        ↓
-Keyword / Complaint Analysis
-        ↓
-Trend & Customer Segment Analysis
-        ↓
-Power BI Dashboard
-        ↓
-Business Insights & Recommendations
+Raw Customer Feedback Data
+          ↓
+Load Dataset
+          ↓
+Understand Dataset
+          ↓
+Check Rows & Columns
+          ↓
+Check Data Types
+          ↓
+Identify Missing Values
+          ↓
+Handle Missing Values
+          ↓
+Check Duplicate Records
+          ↓
+Clean Date Columns
+          ↓
+Standardize Categorical Values
+          ↓
+Validate Ratings
+          ↓
+Check Invalid Values
+          ↓
+Final Data Validation
+          ↓
+Export Clean Dataset
 ```
 
 ---
 
-## 🧹 Data Cleaning & Preparation
+# 🔍 Data Cleaning Steps
 
-The dataset was cleaned and prepared before analysis.
+## 1. Load the Dataset
 
-Key data preparation activities included:
+The raw customer feedback dataset was imported into Python using Pandas.
 
-* Handling missing values
-* Standardizing date fields
-* Removing duplicate records
-* Validating customer information
-* Standardizing sentiment-related values
-* Cleaning text data
-* Handling inconsistent categorical values
-* Validating ratings
-* Preparing feedback text for analysis
-* Creating analysis-ready columns
+```python
+import pandas as pd
 
-The cleaned dataset was then used for exploratory analysis and dashboard development.
+df = pd.read_excel("Customer Feedback.xlsx")
+```
+
+The dataset was then inspected to understand its structure and contents.
 
 ---
 
-## 🧠 Sentiment Analysis
+## 2. Understand the Dataset
 
-Customer feedback was classified into three sentiment categories:
+The following functions were used to understand the dataset:
 
-### 🟢 Positive
+```python
+df.head()
+df.shape
+df.info()
+df.describe()
+```
 
-Feedback indicating satisfaction, appreciation, or a positive customer experience.
+These checks helped identify:
 
-### 🔴 Negative
-
-Feedback expressing dissatisfaction, complaints, or problems.
-
-### ⚪ Neutral
-
-Feedback that is factual, informational, or does not clearly express a positive or negative opinion.
-
-The sentiment classification enables the business to measure overall customer satisfaction and identify areas requiring attention.
-
----
-
-## 📈 Key Analysis Areas
-
-### 1. Overall Sentiment Analysis
-
-Measure the distribution of:
-
-* Positive feedback
-* Negative feedback
-* Neutral feedback
-
-### 2. Product Sentiment Analysis
-
-Compare sentiment across products to identify:
-
-* Best-performing products
-* Products with frequent complaints
-* Products requiring improvement
-
-### 3. Complaint Analysis
-
-Identify recurring complaint topics and keywords to understand major customer pain points.
-
-### 4. Keyword Analysis
-
-Analyze frequently occurring words to understand what customers talk about most.
-
-### 5. Customer Segment Analysis
-
-Compare customer sentiment across different demographic or customer segments.
-
-### 6. Feedback Channel Analysis
-
-Analyze the number of responses received from each feedback channel.
-
-### 7. Time-Series Analysis
-
-Track sentiment over time to identify:
-
-* Improvements
-* Declines
-* Seasonal patterns
-* Sudden changes in customer satisfaction
+* Number of rows
+* Number of columns
+* Column names
+* Data types
+* Numerical statistics
+* Potential data quality issues
 
 ---
 
-## 📊 Power BI Dashboard
+## 3. Check Missing Values
 
-The Power BI dashboard provides an interactive view of customer feedback and sentiment.
+Missing values were identified using:
 
-### Key Dashboard Metrics
+```python
+df.isnull().sum()
+```
 
-* Total Feedback
-* Positive Feedback
-* Negative Feedback
-* Neutral Feedback
-* Positive Sentiment %
-* Negative Sentiment %
-* Average Rating
-* Most Mentioned Product
-* Most Common Complaint
-* Feedback Volume
+The percentage of missing values was also examined to understand the extent of missing data.
 
-### Recommended Dashboard Visuals
-
-* **KPI Cards** – Overall feedback and sentiment metrics
-* **Donut Chart** – Sentiment distribution
-* **Bar Chart** – Sentiment by product
-* **Column Chart** – Feedback by channel
-* **Line Chart** – Sentiment trend over time
-* **Bar Chart** – Most frequently mentioned keywords
-* **Matrix** – Product vs. sentiment
-* **Slicers** – Product, sentiment, channel, customer segment, and date
+Missing values were then handled according to the nature of each column.
 
 ---
 
-## 💡 Business Insights
+## 4. Clean Date Columns
 
-The analysis can help management understand:
+Date columns were checked for inconsistent or invalid date formats.
 
-* Which products customers like the most
-* Which products generate the most complaints
-* What issues customers mention repeatedly
-* Whether customer satisfaction is improving or declining
-* Which customer segments are most satisfied
-* Which feedback channels are most active
-* What positive aspects customers appreciate
-* Which negative aspects require immediate attention
+The date values were converted using Pandas:
 
----
+```python
+df['Date'] = pd.to_datetime(
+    df['Date'],
+    format='mixed',
+    dayfirst=True,
+    errors='coerce'
+)
+```
 
-## 🚀 Business Recommendations
+Using `errors='coerce'` converts invalid date values into `NaT`, allowing them to be identified and handled appropriately.
 
-Based on the analysis, organizations can:
+### Validation
 
-1. Prioritize products with high negative sentiment for quality improvements.
-2. Address recurring complaints by investigating their root causes.
-3. Monitor customer sentiment regularly instead of relying only on periodic surveys.
-4. Improve customer support in areas associated with repeated negative feedback.
-5. Identify successful products and use them as benchmarks.
-6. Focus marketing and retention strategies on highly satisfied customer segments.
-7. Improve feedback collection through the most active customer channels.
-8. Track sentiment trends after implementing business improvements.
-9. Use customer feedback as an ongoing decision-making resource.
+```python
+df['Date'].isnull().sum()
+```
+
+This helped identify records where the date could not be converted successfully.
 
 ---
 
-## 📁 Project Structure
+## 5. Check Duplicate Records
+
+Duplicate records were identified using:
+
+```python
+df.duplicated().sum()
+```
+
+Duplicate records were reviewed and removed where appropriate.
+
+```python
+df = df.drop_duplicates()
+```
+
+---
+
+## 6. Standardize Categorical Values
+
+Categorical columns were checked for inconsistent representations of the same value.
+
+For example:
 
 ```text
-Customer-Feedback-Sentiment-Analysis/
+Yes
+yes
+Y
+YES
+```
+
+These values represent the same response but may be treated as different categories during analysis.
+
+They were standardized into a consistent format.
+
+Example:
+
+```python
+df['Resolved'] = df['Resolved'].replace({
+    'Y': 'Yes',
+    'N': 'No'
+})
+```
+
+---
+
+## 7. Validate Rating Values
+
+Customer ratings were checked to ensure that they contained only valid rating values.
+
+The expected rating range was:
+
+```text
+1, 2, 3, 4, 5
+```
+
+The unique values were checked using:
+
+```python
+df['Rating'].unique()
+```
+
+This helped identify unexpected or invalid rating values.
+
+---
+
+## 8. Check Data Types
+
+Data types were reviewed using:
+
+```python
+df.dtypes
+```
+
+Columns were converted to appropriate data types where required.
+
+For example:
+
+* Date → datetime
+* Rating → numeric
+* Customer ID → appropriate identifier format
+* Categorical fields → consistent text format
+
+---
+
+## 9. Validate the Cleaned Dataset
+
+After completing the cleaning process, the dataset was checked again.
+
+```python
+df.info()
+df.isnull().sum()
+df.duplicated().sum()
+df.describe()
+```
+
+Additional checks were performed to ensure that:
+
+* Missing values were handled appropriately
+* Duplicate records were removed
+* Dates were standardized
+* Ratings were valid
+* Categories were consistent
+* Data types were appropriate
+
+---
+
+# 📊 Dataset Quality Checks
+
+The project focused on identifying the following data quality issues:
+
+| Data Quality Check   | Purpose                                 |
+| -------------------- | --------------------------------------- |
+| Missing Values       | Identify incomplete records             |
+| Duplicate Records    | Remove repeated observations            |
+| Date Validation      | Standardize and identify invalid dates  |
+| Rating Validation    | Ensure ratings contain valid values     |
+| Category Consistency | Standardize categorical values          |
+| Data Types           | Ensure columns have appropriate formats |
+| Invalid Values       | Identify unexpected entries             |
+| Final Validation     | Confirm dataset is analysis-ready       |
+
+---
+
+# 📁 Project Structure
+
+```text
+Customer-Feedback-Data-Cleaning/
 │
 ├── 📂 Data/
-│   ├── CustomerFeedback.csv
-│   └── Cleaned_CustomerFeedback.csv
+│   ├── Customer Feedback.xlsx
+│   └── Cleaned_Customer_Feedback.csv
 │
 ├── 📂 Python/
-│   └── Customer_Feedback_Sentiment_Analysis.ipynb
-│
-├── 📂 PowerBI/
-│   └── Customer_Feedback_Sentiment_Analysis.pbix
-│
-├── 📂 Images/
-│   └── Dashboard.png
+│   └── Customer_Feedback_Data_Cleaning.ipynb
 │
 ├── 📄 README.md
 └── 📄 requirements.txt
@@ -322,41 +324,83 @@ Customer-Feedback-Sentiment-Analysis/
 
 ---
 
-## 📌 Project Outcome
+# 📌 Project Outcome
 
-This project demonstrates how **customer feedback can be transformed from unstructured text into actionable business insights**.
+The raw customer feedback dataset was transformed into a **clean, standardized, and analysis-ready dataset** using Python and Pandas.
 
-By combining **Python, NLP, exploratory data analysis, and Power BI**, the solution provides a scalable approach to:
+The cleaning process improved the quality of the dataset by:
 
-> **Collect → Clean → Analyze → Understand → Act**
+* Identifying missing values
+* Handling invalid dates
+* Removing duplicate records
+* Standardizing categorical values
+* Validating customer ratings
+* Correcting data types
+* Performing final data quality checks
 
-The analysis helps organizations better understand the **Voice of the Customer**, identify critical issues, improve customer satisfaction, and support data-driven business decisions.
+The cleaned dataset can now be used as a reliable input for future **sentiment analysis, exploratory data analysis, visualization, or machine learning projects**.
 
 ---
 
-## 👩‍💻 Skills Demonstrated
+# 🧠 Key Python Skills Demonstrated
 
 * Python
 * Pandas
+* Data Inspection
 * Data Cleaning
-* Exploratory Data Analysis
-* NLP / Text Analytics
-* Sentiment Analysis
-* Data Visualization
-* Power BI
-* Dashboard Development
-* Business Analysis
-* Data Storytelling
-* Business Problem Solving
-* Customer Experience Analytics
+* Missing Value Handling
+* Duplicate Detection
+* DateTime Conversion
+* Data Type Conversion
+* Categorical Data Standardization
+* Data Validation
+* Data Quality Checks
+* Dataset Export
 
 ---
 
-## 📬 Author
+# 💻 Key Pandas Functions Used
+
+Some of the important Pandas functions used in this project include:
+
+```python
+df.head()
+df.shape
+df.info()
+df.describe()
+df.isnull().sum()
+df.duplicated()
+df.drop_duplicates()
+df.unique()
+df.value_counts()
+pd.to_datetime()
+df.dtypes
+df.dropna()
+df.fillna()
+```
+
+---
+
+# 🚀 Future Scope
+
+This project currently focuses **only on data cleaning and preprocessing**.
+
+The cleaned dataset can be used as the foundation for future projects such as:
+
+* Customer sentiment analysis
+* NLP-based text analysis
+* Customer satisfaction analysis
+* Exploratory data analysis
+* Customer feedback visualization
+* Machine learning models
+
+---
+
+## 👩‍💻 Author
 
 **Ishwarya RB**
 
 Aspiring Data Analyst | Python | SQL | Excel | Power BI | Tableau
 
-This project is part of my Data Analytics portfolio and demonstrates my ability to transform raw customer feedback into meaningful business insights.
+This project demonstrates my practical knowledge of **Python-based data cleaning and data preprocessing** as part of my Data Analytics portfolio.
 
